@@ -8,7 +8,7 @@ while true; do
 		if ! kill -0 "$channel_pid" 2>/dev/null; then
 			echo "[$channel] [Main Script] Attempting to start streamlink"
 			streamlink \
-				--config /streamlink.config \
+				--config /app/streamlink.config \
 				--config /config/user_config.config \
 				--logformat "[$channel] [streamlink] [{name}][{levelname}] {message}" \
 				--output "/download/$channel/({time:%Y-%m-%dT%H%M%z}) {title} [{id}].mkv" \
